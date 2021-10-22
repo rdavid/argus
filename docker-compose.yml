@@ -1,5 +1,5 @@
 ---
-version: '3'
+version: '2'
 services:
   transmission:
     image: lscr.io/linuxserver/transmission
@@ -17,4 +17,20 @@ services:
       - 9091:9091
       - 51413:51413
       - 51413:51413/udp
+    restart: unless-stopped
+  openvpn-as:
+    image: ghcr.io/linuxserver/openvpn-as
+    container_name: openvpn-as
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PUID=1001
+      - PGID=1001
+      - TZ=America/New_York
+    volumes:
+      - /home/david/vpn/config:/config
+    ports:
+      - 943:943
+      - 9443:9443
+      - 1194:1194/udp
     restart: unless-stopped
