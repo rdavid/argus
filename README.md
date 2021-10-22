@@ -19,6 +19,7 @@ The server runs Transmission, OpenVPN, Ngnix.
     cat <<EOT >> cred.env
     USER=[username]
     PASS=[password]
+    URL=[url]
     EOT
     sudo docker-compose up -d
 
