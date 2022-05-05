@@ -1,8 +1,5 @@
-# Argus
+# Argus [![Hits-of-Code](https://hitsofcode.com/github/rdavid/argus?branch=master)](https://hitsofcode.com/view/github/rdavid/argus?branch=master) [![License](https://img.shields.io/badge/license-0BSD-green)](https://github.com/rdavid/argus/blob/master/LICENSE)
 Configures, builds and runs external server.
-
-[![Hits-of-Code](https://hitsofcode.com/github/rdavid/argus?branch=master)](https://hitsofcode.com/view/github/rdavid/argus?branch=master)
-[![License](https://img.shields.io/badge/license-0BSD-green)](https://github.com/rdavid/argus/blob/master/LICENSE)
 
 * [About](#about)
 * [Install](#install)
