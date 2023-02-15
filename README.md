@@ -12,9 +12,9 @@ The server runs Transmission, OpenVPN, Ngnix.
 
 ## Install
 ```sh
-git clone https://github.com/rdavid/argus.git
-cd argus
-cat <<EOT >> cred.env
+git clone git@github.com:rdavid/argus.git &&
+	cd argus &&
+	cat <<EOT >> cred.env
 USER=[username]
 PASS=[password]
 URL=[url]
