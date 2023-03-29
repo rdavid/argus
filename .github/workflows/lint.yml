@@ -6,6 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: nosborn/github-action-markdown-cli@v3.2.0
+        with:
+          files: .
       - uses: ibiqlik/action-yamllint@v3
         with:
           file_or_dir: docker-compose.yml .github/workflows/*.yml
