@@ -11,4 +11,4 @@ jobs:
           files: .
       - uses: ibiqlik/action-yamllint@v3
         with:
-          file_or_dir: docker-compose.yml .github/workflows/*.yml
+          file_or_dir: ./*.yml .github/*.yml .github/workflows/*.yml
