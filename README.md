@@ -1,5 +1,6 @@
 # Argus
 
+[![linters](https://github.com/rdavid/argus/actions/workflows/lint.yml/badge.svg)](https://github.com/rdavid/argus/actions/workflows/lint.yml)
 [![hits of code](https://hitsofcode.com/github/rdavid/argus?branch=master&label=hits%20of%20code)](https://hitsofcode.com/view/github/rdavid/argus?branch=master)
 [![license](https://img.shields.io/github/license/rdavid/argus?color=blue&labelColor=gray&logo=freebsd&logoColor=lightgray&style=flat)](https://github.com/rdavid/argus/blob/master/LICENSE)
 
