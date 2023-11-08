@@ -17,7 +17,7 @@ OpenVPN, Ngnix.
 
 ```sh
 git clone git@github.com:rdavid/argus.git &&
-  cd argus &&
+  cd ./argus &&
   cat <<EOT >> cred.env
 USER=[username]
 PASS=[password]
