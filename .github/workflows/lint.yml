@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2023-2025 David Rabkin
+# SPDX-License-Identifier: 0BSD
 ---
 name: linters
 'on': push
@@ -9,6 +11,7 @@ jobs:
       - uses: nosborn/github-action-markdown-cli@v3.4.0
         with:
           files: .
+      - uses: fsfe/reuse-action@v5
       - uses: ibiqlik/action-yamllint@v3
         with:
           file_or_dir: ./*.yml .github/*.yml .github/workflows/*.yml
