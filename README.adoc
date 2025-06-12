@@ -1,0 +1,39 @@
+// Settings:
+:toc: macro
+:!toc-title:
+// URLs:
+:url-cv: http://cv.rabkin.co.il
+:url-license: https://github.com/rdavid/argus/blob/master/LICENSES/0BSD.txt
+
+= Argus
+
+image:https://github.com/rdavid/argus/actions/workflows/lint.yml/badge.svg[lint,link=https://github.com/rdavid/argus/actions/workflows/lint.yml]
+image:https://hitsofcode.com/github/rdavid/argus?branch=master&label=hits%20of%20code[hits
+of code,link=https://hitsofcode.com/view/github/rdavid/argus?branch=master]
+image:https://img.shields.io/github/license/rdavid/argus?color=blue&labelColor=gray&logo=freebsd&logoColor=lightgray&style=flat[license,link={url-license}]
+
+toc::[]
+
+== About
+
+Configures, builds, and runs an external server. The server runs Transmission,
+OpenVPN, Ngnix.
+
+== Install
+
+[,sh]
+----
+git clone git@github.com:rdavid/argus.git &&
+  cd ./argus &&
+  cat <<EOT >> cred.env
+USER=[username]
+PASS=[password]
+URL=[url]
+EOT
+sudo docker-compose up -d
+----
+
+== License
+
+`argus` is copyright {url-cv}[David Rabkin] and available under a
+{url-license}[Zero-Clause BSD license].
