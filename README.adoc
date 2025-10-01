@@ -20,8 +20,8 @@ toc::[]
 
 == About
 
-Configures, builds, and runs an external server. The server runs Transmission,
-OpenVPN, Ngnix.
+Configures, builds, and runs an external server.
+The server runs Transmission, OpenVPN, Nginx.
 
 == Install
 
