@@ -17,6 +17,8 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v6.0.3
+        with:
+          persist-credentials: false
       - id: get
         run: |
           srv=https://raw.githubusercontent.com/rhysd/actionlint
