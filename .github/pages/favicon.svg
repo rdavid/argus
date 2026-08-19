@@ -1,0 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2026 David Rabkin
+SPDX-License-Identifier: 0BSD
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <path d="M2 12c2.2-4 6-7 10-7s7.8 3 10 7c-2.2 4-6 7-10 7s-7.8-3-10-7Z" fill="none" stroke="#2b2b2b" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M2 12c2.2-4 6-7 10-7s7.8 3 10 7c-2.2 4-6 7-10 7s-7.8-3-10-7Z" fill="none" stroke="#f0dfaf" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="12" cy="12" r="3.2" fill="#f0dfaf"/>
+</svg>
