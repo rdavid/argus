@@ -12,22 +12,27 @@
 
 = Argus
 
-image:{img-lint}[lint,link={url-lint}]
-image:{img-hoc}[hits of code,link={url-hoc}]
-image:{img-license}[license,link={url-license}]
+[subs=attributes+]
+++++
+<div align="right">
+<a href="{url-lint}"><img src="{img-lint}" alt="lint"></a>
+<a href="{url-hoc}"><img src="{img-hoc}" alt="hits of code"></a>
+<a href="{url-license}"><img src="{img-license}" alt="license"></a>
+</div>
+++++
 
 toc::[]
 
 == About
 
-Configures, builds, and runs an external server that hosts Transmission,
+Configures, builds, and runs a remote server that hosts Transmission,
 OpenVPN, and Nginx.
 
 == Install
 
 [,sh]
 ----
-git clone git@github.com:rdavid/argus.git &&
+git clone https://github.com/rdavid/argus.git &&
   cd ./argus &&
   cat <<EOT >> cred.env
 USER=[username]
