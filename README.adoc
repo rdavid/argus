@@ -37,10 +37,13 @@ endif::[]
 
 == About
 
-Configures, builds, and runs a remote server that hosts Transmission,
-OpenVPN, and Nginx.
+Docker Compose setup for a remote server.
+It runs Transmission, OpenVPN Access Server, and Nginx behind SWAG.
 
 == Install
+
+Clone the repository, put your credentials in `cred.env`, and start the
+containers.
 
 [,sh]
 ----

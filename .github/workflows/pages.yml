@@ -2,8 +2,8 @@
 # SPDX-License-Identifier: 0BSD
 #
 # Builds README.adoc into the project's GitHub Pages site. The deploy job's
-# pages:write permission publishes the built site, and id-token:write
-# OIDC-authenticates the deployment.
+# pages:write permission publishes the built site. Its id-token:write
+# permission authenticates the deployment through OIDC.
 ---
 name: pages
 'on':
