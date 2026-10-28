@@ -35,7 +35,7 @@ services:
       - 9443:9443
       - 1194:1194/udp
     restart: unless-stopped
-  nginx:
+  swag:
     image: lscr.io/linuxserver/swag
     container_name: swag
     cap_add:
