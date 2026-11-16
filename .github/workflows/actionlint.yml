@@ -38,8 +38,9 @@ jobs:
           curl \
             --fail \
             --location \
-            --silent \
+            --retry 3 \
             --show-error \
+            --silent \
             "$srv/v$ver/scripts/download-actionlint.bash" |
             bash -s "$ver"
       - run: ./actionlint

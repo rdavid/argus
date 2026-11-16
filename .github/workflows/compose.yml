@@ -5,6 +5,7 @@ name: compose
 'on':
   pull_request:
     paths: &paths
+      - .github/workflows/compose.yml
       - docker-compose.yml
   push:
     branches: [master]
