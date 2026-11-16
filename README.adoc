@@ -5,10 +5,11 @@
 :img-hoc: https://hitsofcode.com/github/rdavid/argus?branch=master&label=hits%20of%20code
 :img-license: https://img.shields.io/github/license/rdavid/argus?color=94bff3&labelColor=555555&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHRleHQgeD0iMTIiIHk9IjIwIiBmb250LWZhbWlseT0iSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNkY2RjY2MiPiYjMTY5OzwvdGV4dD48L3N2Zz4%3D&logoColor=dcdccc&style=flat
 :img-lint: https://img.shields.io/github/actions/workflow/status/rdavid/argus/yamllint.yml?branch=master&color=7f9f7f&label=lint&labelColor=555555&logo=lintcode&logoColor=dcdccc&style=flat
-:url-cv: http://cv.rabkin.co.il
+:url-author: https://rdavid.github.io/
 :url-hoc: https://hitsofcode.com/view/github/rdavid/argus?branch=master
 :url-license: https://github.com/rdavid/argus/blob/master/LICENSES/0BSD.txt
 :url-lint: https://github.com/rdavid/argus/actions/workflows/yamllint.yml
+:url-linuxserver: https://www.linuxserver.io
 :url-openvpn-as: https://docs.linuxserver.io/deprecated_images/docker-openvpn-as/
 :url-swag: https://docs.linuxserver.io/images/docker-swag/
 :url-transmission: https://docs.linuxserver.io/images/docker-transmission/
@@ -41,7 +42,7 @@ endif::[]
 == About
 
 Argus is a Docker Compose setup that runs three
-https://www.linuxserver.io[LinuxServer.io] containers.
+{url-linuxserver}[LinuxServer.io] containers.
 
 [cols="1,3,2"]
 |===
@@ -112,7 +113,7 @@ sudo docker compose up --detach
 
 == License
 
-`argus` is copyright {url-cv}[David Rabkin] and available under a
+`argus` is copyright {url-author}[David Rabkin] and available under a
 {url-license}[Zero-Clause BSD license].
 
 ifdef::pages-build[]
@@ -120,11 +121,11 @@ ifdef::pages-build[]
 <footer id="site-footer">
   <div class="footer-left">
     <img src="favicon.svg" alt="" width="20" height="20">
-    <span>argus by <a href="http://cv.rabkin.co.il" target="_blank" rel="noopener">David Rabkin</a></span>
+    <span>argus by <a href="https://rdavid.github.io/" target="_blank" rel="noopener">David Rabkin</a></span>
   </div>
   <div class="footer-links">
-    <a href="https://github.com/rdavid/argus" target="_blank" rel="noopener">GitHub</a>
     <a href="https://github.com/rdavid/argus/blob/master/LICENSES/0BSD.txt" target="_blank" rel="noopener">0BSD License</a>
+    <a href="https://github.com/rdavid/argus" target="_blank" rel="noopener">Source</a>
   </div>
 </footer>
 ++++
