@@ -9,6 +9,9 @@
 :url-hoc: https://hitsofcode.com/view/github/rdavid/argus?branch=master
 :url-license: https://github.com/rdavid/argus/blob/master/LICENSES/0BSD.txt
 :url-lint: https://github.com/rdavid/argus/actions/workflows/yamllint.yml
+:url-openvpn-as: https://docs.linuxserver.io/deprecated_images/docker-openvpn-as/
+:url-swag: https://docs.linuxserver.io/images/docker-swag/
+:url-transmission: https://docs.linuxserver.io/images/docker-transmission/
 
 = Argus
 
@@ -37,24 +40,74 @@ endif::[]
 
 == About
 
-Docker Compose setup for a remote server.
-It runs Transmission, OpenVPN Access Server, and Nginx behind SWAG.
+Argus is a Docker Compose setup that runs three
+https://www.linuxserver.io[LinuxServer.io] containers.
+
+[cols="1,3,2"]
+|===
+|Service |Purpose |Ports
+
+|{url-transmission}[`transmission`]
+|BitTorrent client with a web interface.
+|9091, 51413
+
+|{url-openvpn-as}[`openvpn-as`]
+|OpenVPN Access Server for remote access.
+|943, 9443, 1194/udp
+
+|{url-swag}[`swag`]
+|Nginx reverse proxy with Let's Encrypt certificates.
+|80, 443
+|===
+
+The server needs the following.
+
+* Docker with the Compose plugin.
+* A domain that resolves to the server.
+* The ports above open on the firewall.
 
 == Install
 
-Clone the repository, put your credentials in `cred.env`, and start the
-containers.
+Clone the repository.
 
 [,sh]
 ----
-git clone https://github.com/rdavid/argus.git &&
-  cd ./argus &&
-  cat <<EOT >> cred.env
-USER=[username]
-PASS=[password]
-URL=[url]
+git clone https://github.com/rdavid/argus.git
+cd argus
+----
+
+Create `cred.env` next to `docker-compose.yml`.
+Transmission takes `USER` and `PASS` for its web interface.
+SWAG takes `URL` as the domain for its certificate.
+Keep this file out of version control.
+
+[,sh]
+----
+cat <<EOT >cred.env
+USER=username
+PASS=password
+URL=example.com
 EOT
-sudo docker-compose up -d
+----
+
+Each service stores its data under `/home/david`.
+Edit the `volumes` entries in `docker-compose.yml` to match your host.
+Set `PUID` and `PGID` to the owner of those directories.
+Set `TZ` to your time zone.
+
+Start the containers.
+
+[,sh]
+----
+sudo docker compose up --detach
+----
+
+To update, pull the latest images and recreate the changed containers.
+
+[,sh]
+----
+sudo docker compose pull
+sudo docker compose up --detach
 ----
 
 == License

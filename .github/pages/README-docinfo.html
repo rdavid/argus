@@ -72,6 +72,31 @@ code {
   color: var(--accent-cyan) !important;
   border: 1px solid var(--border);
 }
+table.tableblock {
+  background: var(--bg-panel) !important;
+  border: 1px solid var(--border) !important;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+table.tableblock thead,
+table.tableblock tr { background: transparent !important; }
+table.tableblock th,
+table.tableblock td {
+  border: 0 solid var(--border) !important;
+  border-bottom-width: 1px !important;
+}
+table.tableblock tbody tr:last-child > td {
+  border-bottom-width: 0 !important;
+}
+table.tableblock thead th {
+  font-family: var(--mono);
+  color: var(--accent-yellow) !important;
+}
+table.tableblock td,
+table.tableblock p.tableblock { color: var(--fg) !important; }
+#content p.tableblock { text-align: left; }
 #content #toc {
   display: flex;
   align-items: center;
